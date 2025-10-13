@@ -1,0 +1,49 @@
+{
+  "name": "admin-panel",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start -p 3001",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@editorjs/code": "^2.9.3",
+    "@editorjs/delimiter": "^1.4.2",
+    "@editorjs/editorjs": "^2.30.8",
+    "@editorjs/header": "^2.8.8",
+    "@editorjs/image": "^2.10.2",
+    "@editorjs/inline-code": "^1.5.2",
+    "@editorjs/link": "^2.6.2",
+    "@editorjs/list": "^2.0.8",
+    "@editorjs/marker": "^1.4.0",
+    "@editorjs/paragraph": "^2.11.7",
+    "@editorjs/quote": "^2.7.6",
+    "@editorjs/table": "^2.4.5",
+    "@editorjs/underline": "^1.2.1",
+    "@radix-ui/react-label": "^2.1.7",
+    "@radix-ui/react-slot": "^1.2.3",
+    "@tanstack/react-query": "^5.80.7",
+    "axios": "^1.10.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.516.0",
+    "next": "15.3.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "sonner": "^2.0.5",
+    "tailwind-merge": "^3.3.1"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.3",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}

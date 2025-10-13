@@ -1,0 +1,681 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background: white;
+}
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 84% 4.9%;
+  --primary: 221.2 83.2% 53.3%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 210 40% 96%;
+  --secondary-foreground: 222.2 84% 4.9%;
+  --muted: 210 40% 96%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --accent: 210 40% 96%;
+  --accent-foreground: 222.2 84% 4.9%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 221.2 83.2% 53.3%;
+  --radius: 0.5rem;
+}
+
+/* Editor.js Styles */
+.editor-js-container .codex-editor {
+  border: none;
+}
+
+.editor-js-container .codex-editor__redactor {
+  padding: 0;
+}
+
+.editor-js-container .ce-block__content {
+  margin: 0;
+  max-width: none;
+}
+
+.editor-js-container .ce-paragraph {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.editor-js-container .ce-header {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.editor-js-container .ce-header[data-level="1"] {
+  font-size: 2rem;
+}
+
+.editor-js-container .ce-header[data-level="2"] {
+  font-size: 1.75rem;
+}
+
+.editor-js-container .ce-header[data-level="3"] {
+  font-size: 1.5rem;
+}
+
+.editor-js-container .ce-header[data-level="4"] {
+  font-size: 1.25rem;
+}
+
+.editor-js-container .ce-header[data-level="5"] {
+  font-size: 1.125rem;
+}
+
+.editor-js-container .ce-header[data-level="6"] {
+  font-size: 1rem;
+}
+
+.editor-js-container .ce-quote {
+  border-left: 4px solid #e5e7eb;
+  padding-left: 1rem;
+  margin: 1rem 0;
+  font-style: italic;
+  color: #6b7280;
+}
+
+.editor-js-container .ce-delimiter {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  margin: 2rem 0;
+}
+
+.editor-js-container .ce-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.editor-js-container .ce-table th,
+.editor-js-container .ce-table td {
+  border: 1px solid #e5e7eb;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.editor-js-container .ce-table th {
+  background-color: #f9fafb;
+  font-weight: 600;
+}
+
+.editor-js-container .ce-code {
+  background: #f4f4f5;
+  border: 1px solid #e4e4e7;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  font-family: "Monaco", "Courier New", monospace;
+  margin: 1rem 0;
+}
+
+.editor-js-container .ce-list {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+.editor-js-container .ce-list__item {
+  margin-bottom: 0.5rem;
+}
+
+.editor-js-container .ce-image {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.editor-js-container .ce-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.editor-js-container .ce-image__caption {
+  margin-top: 0.5rem;
+  font-style: italic;
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+/* Content preview styles for blog display */
+.editor-content {
+  line-height: 1.6;
+}
+
+.editor-content h1,
+.editor-content h2,
+.editor-content h3,
+.editor-content h4,
+.editor-content h5,
+.editor-content h6 {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.editor-content h1 {
+  font-size: 2rem;
+}
+
+.editor-content h2 {
+  font-size: 1.75rem;
+}
+
+.editor-content h3 {
+  font-size: 1.5rem;
+}
+
+.editor-content h4 {
+  font-size: 1.25rem;
+}
+
+.editor-content h5 {
+  font-size: 1.125rem;
+}
+
+.editor-content h6 {
+  font-size: 1rem;
+}
+
+.editor-content p {
+  margin-bottom: 1rem;
+}
+
+.editor-content ul,
+.editor-content ol {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+.editor-content li {
+  margin-bottom: 0.5rem;
+}
+
+.editor-content blockquote {
+  border-left: 4px solid #e5e7eb;
+  padding-left: 1rem;
+  margin: 1rem 0;
+  font-style: italic;
+  color: #6b7280;
+}
+
+.editor-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+}
+
+.editor-content figure {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.editor-content figcaption {
+  margin-top: 0.5rem;
+  font-style: italic;
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.editor-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+.editor-content th,
+.editor-content td {
+  border: 1px solid #e5e7eb;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.editor-content th {
+  background-color: #f9fafb;
+  font-weight: 600;
+}
+
+.editor-content pre {
+  background: #f4f4f5;
+  border: 1px solid #e4e4e7;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+.editor-content code {
+  font-family: "Monaco", "Courier New", monospace;
+  background: #f1f5f9;
+  padding: 0.125rem 0.25rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+}
+
+.editor-content pre code {
+  background: none;
+  padding: 0;
+}
+
+.editor-content hr {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  margin: 2rem 0;
+}
+
+.editor-content a {
+  color: #3b82f6;
+  text-decoration: underline;
+}
+
+.editor-content a:hover {
+  color: #1d4ed8;
+}
+
+.froala-editor-content h1,
+.froala-editor-content h2,
+.froala-editor-content h3,
+.froala-editor-content h4,
+.froala-editor-content h5,
+.froala-editor-content h6 {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.froala-editor-content h1 {
+  font-size: 2rem;
+}
+.froala-editor-content h2 {
+  font-size: 1.75rem;
+}
+.froala-editor-content h3 {
+  font-size: 1.5rem;
+}
+.froala-editor-content h4 {
+  font-size: 1.25rem;
+}
+.froala-editor-content h5 {
+  font-size: 1.125rem;
+}
+.froala-editor-content h6 {
+  font-size: 1rem;
+}
+
+.froala-editor-content p {
+  margin-bottom: 1rem;
+}
+
+.froala-editor-content ul,
+.froala-editor-content ol {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+.froala-editor-content li {
+  margin-bottom: 0.5rem;
+}
+
+.froala-editor-content blockquote {
+  border-left: 4px solid #e5e7eb;
+  padding-left: 1rem;
+  margin: 1rem 0;
+  font-style: italic;
+  color: #6b7280;
+}
+
+.froala-editor-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+}
+
+.froala-editor-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+.froala-editor-content th,
+.froala-editor-content td {
+  border: 1px solid #e5e7eb;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.froala-editor-content th {
+  background-color: #f9fafb;
+  font-weight: 600;
+}
+
+/* Custom Paragraph Styles for Froala Editor */
+.fr-text-gray {
+  color: #6b7280 !important;
+}
+
+.fr-text-bordered {
+  border: 1px solid #d1d5db;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  background-color: #f9fafb;
+}
+
+.fr-text-spaced {
+  letter-spacing: 0.1em;
+}
+
+.fr-text-uppercase {
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+/* Enhanced typography styles */
+.froala-editor-content .fr-text-gray {
+  color: #6b7280;
+}
+
+.froala-editor-content .fr-text-bordered {
+  border: 1px solid #d1d5db;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  background-color: #f9fafb;
+}
+
+.froala-editor-content .fr-text-spaced {
+  letter-spacing: 0.1em;
+}
+
+.froala-editor-content .fr-text-uppercase {
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+/* Font size classes for better control */
+.froala-editor-content .fr-size-8 {
+  font-size: 8px;
+}
+.froala-editor-content .fr-size-9 {
+  font-size: 9px;
+}
+.froala-editor-content .fr-size-10 {
+  font-size: 10px;
+}
+.froala-editor-content .fr-size-11 {
+  font-size: 11px;
+}
+.froala-editor-content .fr-size-12 {
+  font-size: 12px;
+}
+.froala-editor-content .fr-size-13 {
+  font-size: 13px;
+}
+.froala-editor-content .fr-size-14 {
+  font-size: 14px;
+}
+.froala-editor-content .fr-size-15 {
+  font-size: 15px;
+}
+.froala-editor-content .fr-size-16 {
+  font-size: 16px;
+}
+.froala-editor-content .fr-size-17 {
+  font-size: 17px;
+}
+.froala-editor-content .fr-size-18 {
+  font-size: 18px;
+}
+.froala-editor-content .fr-size-20 {
+  font-size: 20px;
+}
+.froala-editor-content .fr-size-22 {
+  font-size: 22px;
+}
+.froala-editor-content .fr-size-24 {
+  font-size: 24px;
+}
+.froala-editor-content .fr-size-26 {
+  font-size: 26px;
+}
+.froala-editor-content .fr-size-28 {
+  font-size: 28px;
+}
+.froala-editor-content .fr-size-30 {
+  font-size: 30px;
+}
+.froala-editor-content .fr-size-32 {
+  font-size: 32px;
+}
+.froala-editor-content .fr-size-36 {
+  font-size: 36px;
+}
+.froala-editor-content .fr-size-40 {
+  font-size: 40px;
+}
+.froala-editor-content .fr-size-44 {
+  font-size: 44px;
+}
+.froala-editor-content .fr-size-48 {
+  font-size: 48px;
+}
+.froala-editor-content .fr-size-54 {
+  font-size: 54px;
+}
+.froala-editor-content .fr-size-60 {
+  font-size: 60px;
+}
+.froala-editor-content .fr-size-66 {
+  font-size: 66px;
+}
+.froala-editor-content .fr-size-72 {
+  font-size: 72px;
+}
+.froala-editor-content .fr-size-80 {
+  font-size: 80px;
+}
+.froala-editor-content .fr-size-88 {
+  font-size: 88px;
+}
+.froala-editor-content .fr-size-96 {
+  font-size: 96px;
+}
+
+/* Custom Inline Classes for Froala Editor */
+.highlight-yellow {
+  background-color: #fff3cd !important;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+.highlight-blue {
+  background-color: #cce7ff !important;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+.highlight-green {
+  background-color: #d4edda !important;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3) !important;
+}
+
+.text-border {
+  border: 1px solid #dee2e6 !important;
+  padding: 2px 4px;
+  border-radius: 3px;
+  background-color: #f8f9fa;
+}
+
+.text-gradient {
+  background: linear-gradient(45deg, #667eea 0%, #764ba2 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  font-weight: bold;
+}
+
+/* Apply the same styles in content preview */
+.froala-editor-content .highlight-yellow {
+  background-color: #fff3cd;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+.froala-editor-content .highlight-blue {
+  background-color: #cce7ff;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+.froala-editor-content .highlight-green {
+  background-color: #d4edda;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+.froala-editor-content .text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.froala-editor-content .text-border {
+  border: 1px solid #dee2e6;
+  padding: 2px 4px;
+  border-radius: 3px;
+  background-color: #f8f9fa;
+}
+
+.froala-editor-content .text-gradient {
+  background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: bold;
+}
+
+/* Responsive Froala Editor */
+@media (max-width: 768px) {
+  .fr-toolbar {
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .fr-box {
+    border-radius: 0.5rem;
+  }
+
+  .fr-element {
+    padding: 1rem;
+  }
+}
+
+/* Custom Froala Editor Theme */
+.fr-box {
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.fr-box.fr-basic.fr-top {
+  border-radius: 0.5rem;
+}
+
+.fr-toolbar {
+  border-bottom: 1px solid #e5e7eb;
+  background: #f9fafb;
+}
+
+.fr-element {
+  min-height: 400px;
+  padding: 1.5rem;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.fr-element:focus {
+  outline: none;
+}
+
+.fr-box.fr-focused {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Enhanced Font Size Dropdown Styling */
+.fr-dropdown-menu .fr-dropdown-wrapper {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.fr-command.fr-btn[data-cmd="fontSize"] {
+  min-width: 60px;
+}
+
+.fr-dropdown-menu[data-name="fontSize"] {
+  min-width: 80px;
+}
+
+.fr-dropdown-menu[data-name="fontSize"] .fr-dropdown-wrapper {
+  padding: 5px 0;
+}
+
+.fr-dropdown-menu[data-name="fontSize"] .fr-dropdown-wrapper a {
+  padding: 8px 16px;
+  display: block;
+  text-decoration: none;
+  color: #333;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.fr-dropdown-menu[data-name="fontSize"] .fr-dropdown-wrapper a:hover {
+  background-color: #f8f9fa;
+}
+
+/* Make font family dropdown more prominent */
+.fr-command.fr-btn[data-cmd="fontFamily"] {
+  min-width: 100px;
+}
+
+.fr-dropdown-menu[data-name="fontFamily"] {
+  min-width: 180px;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+}
